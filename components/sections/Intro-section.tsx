@@ -8,7 +8,10 @@ export function IntroSection() {
       className="w-full flex flex-col items-start justify-center"
     >
       <div className="space-y-6 ">
-        <HeadingBadge title="Introduction" icon={<Hand size={14} />} />
+        <HeadingBadge
+          title="Introduction"
+          icon={<Hand size={14} color="#06B6D4" />}
+        />
 
         <article className="space-y-5 sm:space-y-6">
           <h1 className="text-5xl font-bold tracking-tight leading-tight">
@@ -26,7 +29,7 @@ export function IntroSection() {
             I specialize in building web apps with{" "}
             <span className="text-[#08090a] dark:text-slate-100 font-semibold">
               Next.js, React, TypeScript, Tailwind CSS, Node.js and more.
-            </span>
+            </span>{" "}
             Always excited to tackle new challenges where I can create value and
             grow as a coder. Let&apos;s connect if you&apos;ve got a project
             that could use my skills!

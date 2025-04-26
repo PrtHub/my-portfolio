@@ -10,7 +10,10 @@ export function ContactSection() {
       className="w-full py-10 flex flex-col items-start justify-start gap-y-10"
     >
       <div className="flex flex-col items-start justify-start gap-5">
-        <HeadingBadge title="Contact" icon={<MessageSquare size={14} />} />
+        <HeadingBadge
+          title="Contact"
+          icon={<MessageSquare size={14} color="#EF4444" />}
+        />
         <div className="space-y-2">
           <h3 className="text-3xl font-semibold">
             Let&apos;s{" "}
@@ -44,7 +47,7 @@ export function ContactSection() {
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-sm bg-gray-100 dark:bg-[#191a1a] text-[#08090a] dark:text-slate-200 hover:bg-gray-200 dark:hover:bg-gray-500/10 transition-colors"
               >
                 pritamfinds@gmail.com
-                <Mail className="w-4 h-4 mt-1" />
+                <Mail className="w-4 h-4 mt-1" color="#2563EB" />
               </a>
 
               <div className="flex items-center justify-center gap-4 pt-4">

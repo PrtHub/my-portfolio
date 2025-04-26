@@ -47,44 +47,44 @@ const skillCategories: SkillCategory[] = [
   {
     name: "Languages",
     skills: [
-      { name: "JavaScript", icon: <IoLogoJavascript /> },
-      { name: "TypeScript", icon: <SiTypescript /> },
-      { name: "HTML", icon: <FaHtml5 /> },
-      { name: "CSS", icon: <FaCss3 /> },
-      { name: "Python", icon: <FaPython /> },
+      { name: "JavaScript", icon: <IoLogoJavascript color="#F7DF1E" /> },
+      { name: "TypeScript", icon: <SiTypescript color="#3178C6" /> },
+      { name: "HTML", icon: <FaHtml5 color="#E34F26" /> },
+      { name: "CSS", icon: <FaCss3 color="#1572B6" /> },
+      { name: "Python", icon: <FaPython color="#3776AB" /> },
     ],
   },
   {
     name: "Frameworks",
     skills: [
-      { name: "React", icon: <FaReact /> },
-      { name: "Next.js", icon: <IconBrandNextjs /> },
-      { name: "Node.js", icon: <FaNodeJs /> },
-      { name: "Express", icon: <SiExpress /> },
-      { name: "TailwindCSS", icon: <RiTailwindCssFill /> },
+      { name: "React", icon: <FaReact color="#61DAFB" /> },
+      { name: "Next.js", icon: <IconBrandNextjs color="#ffffff" /> },
+      { name: "Node.js", icon: <FaNodeJs color="#339933" /> },
+      { name: "Express", icon: <SiExpress color="#ffffff" /> },
+      { name: "TailwindCSS", icon: <RiTailwindCssFill color="#06B6D4" /> },
     ],
   },
   {
     name: "Tools",
     skills: [
-      { name: "Git", icon: <FaGitAlt /> },
-      { name: "Docker", icon: <FaDocker /> },
-      { name: "Figma", icon: <FiFigma /> },
-      { name: "VS Code", icon: <VscVscode /> },
-      { name: "GitHub", icon: <FaGithub /> },
+      { name: "Git", icon: <FaGitAlt color="#F05032" /> },
+      { name: "Docker", icon: <FaDocker color="#2496ED" /> },
+      { name: "Figma", icon: <FiFigma color="#F24E1E" /> },
+      { name: "VS Code", icon: <VscVscode color="#007ACC" /> },
+      { name: "GitHub", icon: <FaGithub color="#ffffff" /> },
     ],
   },
   {
     name: "Databases",
     skills: [
-      { name: "MongoDB", icon: <SiMongodb /> },
-      { name: "PostgreSQL", icon: <BiLogoPostgresql /> },
-      { name: "Neon DB", icon: <RiDatabase2Fill /> },
-      { name: "Prisma", icon: <SiPrisma /> },
-      { name: "Drizzle", icon: <SiDrizzle /> },
-      { name: "Firebase", icon: <RiFirebaseFill /> },
-      { name: "Supabase", icon: <RiSupabaseFill /> },
-      { name: "Redis", icon: <DiRedis /> },
+      { name: "MongoDB", icon: <SiMongodb color="#47A248" /> },
+      { name: "PostgreSQL", icon: <BiLogoPostgresql color="#4169E1" /> },
+      { name: "Neon DB", icon: <RiDatabase2Fill color="#00E599" /> },
+      { name: "Prisma", icon: <SiPrisma color="#2D3748" /> },
+      { name: "Drizzle", icon: <SiDrizzle color="#FFDC62" /> },
+      { name: "Firebase", icon: <RiFirebaseFill color="#FFCA28" /> },
+      { name: "Supabase", icon: <RiSupabaseFill color="#3ECF8E" /> },
+      { name: "Redis", icon: <DiRedis color="#DC382D" /> },
     ],
   },
 ];
@@ -111,7 +111,10 @@ export function SkillsSection() {
       className="w-full pt-10 flex flex-col items-start justify-start gap-y-10"
     >
       <div className="flex flex-col items-start justify-start gap-5">
-        <HeadingBadge title="Skills" icon={<Lightbulb size={14} />} />
+        <HeadingBadge
+          title="Skills"
+          icon={<Lightbulb size={14} color="#2563EB" />}
+        />
         <div className="space-y-2">
           <h3 className="text-3xl font-semibold">
             <span className="text-[#08090a] dark:text-slate-200">Skills</span> I

@@ -3,8 +3,9 @@
 import React, { useState } from "react";
 import HeadingBadge from "@/components/heading-badge";
 import { SpotlightCard } from "@/components/ui/spotlight-card";
-import { Building2, Calendar, ChevronRight, Briefcase } from "lucide-react";
+import { Calendar, ChevronRight, Briefcase } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 type Experience = {
   company: string;
@@ -13,12 +14,14 @@ type Experience = {
   duration: string;
   description: string[];
   technologies: string[];
+  link: string;
 };
 
 const experiences: Experience[] = [
   {
     company: "Clipo AI",
     companyLink: "https://www.linkedin.com/company/clipo-ai",
+    link: "https://clipo.ai",
     position: "Frontend Developer",
     duration: "Nov 2024 - Present",
     description: [
@@ -31,6 +34,7 @@ const experiences: Experience[] = [
   {
     company: "Resource Plan",
     companyLink: "https://www.linkedin.com/company/resourceplan",
+    link: "https://resourceplan.io",
     position: "Full Stack Developer",
     duration: "Sep 2024 - Nov 2024",
     description: [
@@ -51,6 +55,7 @@ const experiences: Experience[] = [
   {
     company: "MVP Application and Game Design LLC",
     companyLink: "https://www.linkedin.com/company/mvp-apps",
+    link: "https://mvpapps.com",
     position: "Frontend Developer",
     duration: "June 2024 - July 2024",
     description: [
@@ -70,6 +75,7 @@ const experiences: Experience[] = [
   {
     company: "Influcon Digitals LLC",
     companyLink: "https://www.linkedin.com/company/influcon-digitals",
+    link: "https://influcondigitals.com",
     position: "Full Stack Developer",
     duration: "Dec 2023 - Jan 2024",
     description: [
@@ -101,7 +107,10 @@ export function ExperienceSection() {
     <section id="experience" className="pt-10">
       <div className="space-y-8">
         <div className="flex flex-col items-start justify-start gap-5">
-          <HeadingBadge title="Experience" icon={<Briefcase size={14} />} />
+          <HeadingBadge
+            title="Experience"
+            icon={<Briefcase size={14} color="#F59E42" />}
+          />
           <div className="space-y-2">
             <h3 className="text-3xl font-semibold">
               Work{" "}
@@ -149,10 +158,14 @@ export function ExperienceSection() {
                         )}
                       />
                     </div>
-                    <div className="flex items-center gap-2 text-[#737373] dark:text-[#A1A1AA]">
-                      <Building2 className="w-4 h-4" />
+                    <Link
+                      href={experience.companyLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center z-50 gap-2 text-[#737373] dark:text-[#A1A1AA]"
+                    >
                       <span>{experience.company}</span>
-                    </div>
+                    </Link>
                   </section>
                   <section className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-gray-100 dark:bg-[#191a1a] text-[#08090a] dark:text-slate-200 text-sm">
                     <Calendar className="w-4 h-4" />
