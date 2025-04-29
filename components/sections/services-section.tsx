@@ -74,7 +74,7 @@ export function ServicesSection() {
             glowEffect={true}
             glowSize={150}
             glowOpacity={0.15}
-            className="p-6 rounded-sm border border-gray-200/80 dark:border-gray-500/10 bg-white dark:bg-[#0a0a0a] hover:border-gray-900/30 dark:hover:border-slate-500/20 transition-all duration-300"
+            className="p-6 rounded-sm border border-gray-200/80 dark:border-gray-500/10 bg-white dark:bg-[#0a0a0a] hover:border-gray-900/30 dark:hover:border-gray-500/20 transition-all duration-300"
           >
             <div className="flex flex-col xs:flex-row items-start gap-4">
               <div className="flex-shrink-0 mt-1">{service.icon}</div>

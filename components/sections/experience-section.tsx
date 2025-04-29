@@ -130,8 +130,8 @@ export function ExperienceSection() {
             <SpotlightCard
               key={index}
               className={cn(
-                "p-6 cursor-pointer transition-all duration-300 group rounded-sm border border-gray-200/80 dark:border-gray-500/10 ease-in-out hover:border-gray-900/30 dark:hover:border-slate-500/20",
-                "hover:shadow-lg hover:shadow-gray-200/50 dark:hover:shadow-slate-500/5",
+                "p-6 cursor-pointer transition-all duration-300 group rounded-sm border border-gray-200/80 dark:border-gray-500/10 ease-in-out hover:border-gray-900/30 dark:hover:border-gray-500/20",
+                "hover:shadow-lg hover:shadow-gray-200/50 dark:hover:shadow-gray-500/5",
                 expandedIndex === index ? "bg-opacity-10" : ""
               )}
               gradientColor="rgba(100, 116, 139, 0.15)"

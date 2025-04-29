@@ -24,7 +24,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       lightGradientColor="rgba(15, 23, 42, 0.15)"
       spotlightSize={300}
       disableScale={true}
-      className="flex items-start overflow-hidden rounded-sm border border-gray-200/80 dark:border-gray-500/10 transition-all duration-300 ease-in-out hover:border-gray-900/30 dark:hover:border-slate-500/20 w-full cursor-pointer group"
+      className="flex items-start overflow-hidden rounded-sm border border-gray-200/80 dark:border-gray-500/10 transition-all duration-300 ease-in-out hover:border-gray-900/30 dark:hover:border-gray-500/20 w-full cursor-pointer group"
     >
       <div className="flex sm:flex-row flex-col w-full">
         <div className="relative h-[240px] w-full sm:w-[40%] overflow-hidden">
@@ -56,21 +56,19 @@ export function ProjectCard({ project }: ProjectCardProps) {
           <p className="text-[#737373] dark:text-[#A1A1AA] text-sm font-normal line-clamp-4">
             {project.description}
           </p>
-
           <div className="flex flex-wrap gap-2 pt-2">
             {project.tags.map((tag) => (
               <span
                 key={tag}
-                className="px-2 py-1 text-xs rounded-sm font-medium bg-white dark:bg-[#0a0a0a] border border-gray-200/80 dark:border-gray-500/10 text-[#737373] dark:text-[#A1A1AA] group-hover:border-gray-900/30 dark:group-hover:border-slate-500/20 transition-all duration-300"
+                className="px-2 py-1 text-xs rounded-sm font-medium bg-white dark:bg-[#0a0a0a] border border-gray-200/80 dark:border-gray-500/10 text-[#737373] dark:text-[#A1A1AA] group-hover:border-gray-900/30 dark:group-hover:border-gray-500/20 transition-all duration-300"
               >
                 {tag}
               </span>
             ))}
           </div>
-
           <div className="pt-2 flex justify-between items-center">
             <div className="flex items-center gap-2 text-xs font-medium">
-              <div className="flex items-center gap-1 px-2 py-1 rounded-sm bg-white dark:bg-[#0a0a0a] border border-gray-200/80 dark:border-gray-500/10 text-[#737373] dark:text-[#A1A1AA] group-hover:border-gray-900/30 dark:group-hover:border-slate-500/20 transition-all duration-300">
+              <div className="flex items-center gap-1 px-2 py-1 rounded-sm bg-white dark:bg-[#0a0a0a] border border-gray-200/80 dark:border-gray-500/10 text-[#737373] dark:text-[#A1A1AA] group-hover:border-gray-900/30 dark:group-hover:border-gray-500/20 transition-all duration-300">
                 <CalendarRangeIcon className="size-3" />
                 <span>13/02/2025</span>
               </div>
@@ -81,7 +79,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative px-3 py-1.5 text-sm font-medium text-[#08090a] dark:text-slate-300/70 group-hover:text-[#08090a]/90 dark:group-hover:text-slate-300/90 transition-all duration-300 after:absolute after:bottom-0 after:left-3 after:h-[1px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-[80%]"
+                className="relative px-3 py-1.5 text-sm font-medium text-[#08090a] dark:text-gray-300/70 group-hover:text-[#08090a]/90 dark:group-hover:text-gray-300/90 transition-all duration-300 after:absolute after:bottom-0 after:left-3 after:h-[1px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-[80%]"
               >
                 View Project →
               </Link>

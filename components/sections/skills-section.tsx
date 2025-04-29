@@ -152,7 +152,7 @@ export function SkillsSection() {
         ].map((highlight) => (
           <div
             key={highlight.label}
-            className="group relative p-6 rounded-sm border border-gray-200/20 dark:border-gray-500/10 bg-white dark:bg-[#0a0a0a] hover:border-gray-900/30 dark:hover:border-slate-200/5 transition-all duration-300 text-center overflow-hidden dark:hover:bg-[#111111]"
+            className="group relative p-6 rounded-sm border border-gray-200/20 dark:border-gray-500/10 bg-white dark:bg-[#0a0a0a] hover:border-gray-900/30 dark:hover:border-gray-500/20 transition-all duration-300 text-center overflow-hidden dark:hover:bg-[#111111]"
           >
             <div className="relative z-10">
               <div className="text-3xl font-bold bg-gradient-to-r from-[#08090a] to-[#737373] dark:from-slate-300 dark:to-slate-200 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
