@@ -119,7 +119,7 @@ const MobileNav = ({
                 >
                   <div
                     className={cn(
-                      "absolute inset-0 bg-gradient-to-r from-transparent via-[#08090a]/30 to-transparent dark:from-transparent dark:via-white dark:to-transparent"
+                      "absolute inset-0 bg-gradient-to-r from-transparent via-[#08090a]/30 to-transparent dark:from-transparent dark:via-white/30 dark:to-transparent"
                     )}
                     style={{ animation: "var(--animate-shine)" }}
                   />

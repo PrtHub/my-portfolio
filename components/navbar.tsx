@@ -179,7 +179,7 @@ export function Navbar({
         <div className="flex-shrink-0 relative">
           <Link
             href="#"
-            className="flex items-center justify-center w-9 h-9 rounded-full bg-[#08090a] dark:bg-slate-200 text-white dark:text-black/70 font-semibold relative overflow-hidden group"
+            className="flex items-center justify-center w-9 h-9 rounded-full bg-[#08090a] dark:bg-slate-100 text-white dark:text-black font-semibold relative overflow-hidden group"
           >
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
               <div
