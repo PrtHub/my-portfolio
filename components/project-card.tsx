@@ -1,7 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CalendarRangeIcon } from "lucide-react";
+import { CalendarRange, ExternalLink } from "lucide-react";
 import { SpotlightCard } from "@/components/ui/spotlight-card";
+import { BsGithub } from "react-icons/bs";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 type Project = {
   id: string;
@@ -11,6 +18,8 @@ type Project = {
   videoUrl?: string;
   tags: string[];
   link?: string;
+  githubLink?: string;
+  date?: string;
 };
 
 interface ProjectCardProps {
@@ -69,21 +78,51 @@ export function ProjectCard({ project }: ProjectCardProps) {
           <div className="pt-2 flex justify-between items-center">
             <div className="flex items-center gap-2 text-xs font-medium">
               <div className="flex items-center gap-1 px-2 py-1 rounded-sm bg-white dark:bg-[#0a0a0a] border border-gray-200/80 dark:border-gray-500/10 text-[#737373] dark:text-[#A1A1AA] group-hover:border-gray-900/30 dark:group-hover:border-gray-500/20 transition-all duration-300">
-                <CalendarRangeIcon className="size-3" />
-                <span>13/02/2025</span>
+                <CalendarRange className="size-3" />
+                <span>{project.date}</span>
               </div>
             </div>
 
-            {project.link && (
-              <Link
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative px-3 py-1.5 text-sm font-medium text-[#08090a] dark:text-gray-300/70 group-hover:text-[#08090a]/90 dark:group-hover:text-gray-300/90 transition-all duration-300 after:absolute after:bottom-0 after:left-3 after:h-[1px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-[80%]"
-              >
-                View Project →
-              </Link>
-            )}
+            <div className="flex gap-2">
+              {project.githubLink && (
+                <Link
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative px-1 py-1 text-xs font-medium text-[#08090a] dark:text-gray-300/70 group-hover:text-[#08090a]/90 dark:group-hover:text-gray-300/90 transition-all duration-300 flex items-center gap-1"
+                >
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger className="cursor-pointer">
+                        <BsGithub className="w-4 h-4" />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>View on GitHub</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </Link>
+              )}
+              {project.link && (
+                <Link
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative px-1 py-1 text-xs font-medium text-[#08090a] dark:text-gray-300/70 group-hover:text-[#08090a]/90 dark:group-hover:text-gray-300/90 transition-all duration-300 flex items-center gap-1"
+                >
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger className="cursor-pointer">
+                        <ExternalLink className="w-4 h-4" />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>View Live Demo</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </Link>
+              )}
+            </div>
           </div>
         </div>
       </div>
